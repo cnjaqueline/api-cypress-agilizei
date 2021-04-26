@@ -36,10 +36,9 @@ context('Booking', () => {
         req.postBooking().then(postBookingResponse => {
             req.updateBookingWithoutToken(postBookingResponse).then(putBookingResponse => {
                 assertions.shouldHaveStatus(putBookingResponse, 403)
-                assertions.shouldbookingIdBePresent(postBookingResponse)
-                assertions.shouldHaveDefaultHeaders(postBookingResponse)
-                assertions.shouldHaveContentTypeAppJson(postBookingResponse)
-                assertions.shouldDurationBeFast(postBookingResponse)
+                assertions.shouldHaveDefaultHeaders(putBookingResponse)
+                assertions.shouldHaveContentTypeTxtPlain(putBookingResponse)
+                assertions.shouldDurationBeFast(putBookingResponse)
             })
         })
     })
@@ -48,10 +47,9 @@ context('Booking', () => {
         req.postBooking().then(postBookingResponse => {
             req.updateBookingDoesNotExist(postBookingResponse).then(putBookingResponse => {
                 assertions.shouldHaveStatus(putBookingResponse, 405)
-                assertions.shouldbookingIdBePresent(postBookingResponse)
-                assertions.shouldHaveDefaultHeaders(postBookingResponse)
-                assertions.shouldHaveContentTypeAppJson(postBookingResponse)
-                assertions.shouldDurationBeFast(postBookingResponse)
+                assertions.shouldHaveDefaultHeaders(putBookingResponse)
+                assertions.shouldHaveContentTypeTxtPlain(putBookingResponse)
+                assertions.shouldDurationBeFast(putBookingResponse)
             })
         })
     });
@@ -60,10 +58,9 @@ context('Booking', () => {
         req.postBooking().then(postBookingResponse => {
             req.updateBookingWithInvalidToken(postBookingResponse).then(putBookingResponse => {
                 assertions.shouldHaveStatus(putBookingResponse, 403)
-                assertions.shouldbookingIdBePresent(postBookingResponse)
-                assertions.shouldHaveDefaultHeaders(postBookingResponse)
-                assertions.shouldHaveContentTypeAppJson(postBookingResponse)
-                assertions.shouldDurationBeFast(postBookingResponse)
+                assertions.shouldHaveDefaultHeaders(putBookingResponse)
+                assertions.shouldHaveContentTypeTxtPlain(putBookingResponse)
+                assertions.shouldDurationBeFast(putBookingResponse)
             })
         })
     });
@@ -72,10 +69,9 @@ context('Booking', () => {
         req.postBooking().then(postBookingResponse => {
             req.updateBooking(postBookingResponse).then(putBookingResponse => {
                 assertions.shouldHaveStatus(putBookingResponse, 200)
-                assertions.shouldbookingIdBePresent(postBookingResponse)
-                assertions.shouldHaveDefaultHeaders(postBookingResponse)
-                assertions.shouldHaveContentTypeAppJson(postBookingResponse)
-                assertions.shouldDurationBeFast(postBookingResponse)
+                assertions.shouldHaveDefaultHeaders(putBookingResponse)
+                assertions.shouldHaveContentTypeAppJson(putBookingResponse)
+                assertions.shouldDurationBeFast(putBookingResponse)
             })
         })
     });
@@ -84,10 +80,9 @@ context('Booking', () => {
         req.postBooking().then(postBookingResponse => {
             req.deleteBookingDoesNotExist(postBookingResponse).then(deleteBookingResponse => {
                 assertions.shouldHaveStatus(deleteBookingResponse, 405)
-                assertions.shouldbookingIdBePresent(postBookingResponse)
-                assertions.shouldHaveDefaultHeaders(postBookingResponse)
-                assertions.shouldHaveContentTypeAppJson(postBookingResponse)
-                assertions.shouldDurationBeFast(postBookingResponse)
+                assertions.shouldHaveDefaultHeaders(deleteBookingResponse)
+                assertions.shouldHaveContentTypeTxtPlain(deleteBookingResponse)
+                assertions.shouldDurationBeFast(deleteBookingResponse)
             })
         })
     })
@@ -96,10 +91,9 @@ context('Booking', () => {
         req.postBooking().then(postBookingResponse => {
             req.deleteBookingWithoutToken(postBookingResponse).then(deleteBookingResponse => {
                 assertions.shouldHaveStatus(deleteBookingResponse, 403)
-                assertions.shouldbookingIdBePresent(postBookingResponse)
-                assertions.shouldHaveDefaultHeaders(postBookingResponse)
-                assertions.shouldHaveContentTypeAppJson(postBookingResponse)
-                assertions.shouldDurationBeFast(postBookingResponse)
+                assertions.shouldHaveDefaultHeaders(deleteBookingResponse)
+                assertions.shouldHaveContentTypeTxtPlain(deleteBookingResponse)
+                assertions.shouldDurationBeFast(deleteBookingResponse)
             })
         })
     })
@@ -108,10 +102,9 @@ context('Booking', () => {
         req.postBooking().then(postBookingResponse => {
             req.deleteBookingWithInvalidToken(postBookingResponse).then(deleteBookingResponse => {
                 assertions.shouldHaveStatus(deleteBookingResponse, 403)
-                assertions.shouldbookingIdBePresent(postBookingResponse)
-                assertions.shouldHaveDefaultHeaders(postBookingResponse)
-                assertions.shouldHaveContentTypeAppJson(postBookingResponse)
-                assertions.shouldDurationBeFast(postBookingResponse)
+                assertions.shouldHaveDefaultHeaders(deleteBookingResponse)
+                assertions.shouldHaveContentTypeTxtPlain(deleteBookingResponse)
+                assertions.shouldDurationBeFast(deleteBookingResponse)
             })
         })
     });
@@ -120,10 +113,9 @@ context('Booking', () => {
         req.postBooking().then(postBookingResponse => {
             req.deleteBooking(postBookingResponse).then(deleteBookingResponse => {
                 assertions.shouldHaveStatus(deleteBookingResponse, 201)
-                assertions.shouldbookingIdBePresent(postBookingResponse)
-                assertions.shouldHaveDefaultHeaders(postBookingResponse)
-                assertions.shouldHaveContentTypeAppJson(postBookingResponse)
-                assertions.shouldDurationBeFast(postBookingResponse)
+                assertions.shouldHaveDefaultHeaders(deleteBookingResponse)
+                assertions.shouldHaveContentTypeTxtPlain(deleteBookingResponse)
+                assertions.shouldDurationBeFast(deleteBookingResponse)
             })
         })
     });

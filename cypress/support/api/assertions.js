@@ -16,7 +16,7 @@ class Assertions {
 
     shouldHaveDefaultHeaders(response){
         return expect(response.headers, 'default headers').to.include({
-            server: 'Cowboy',
+            server: 'Cowboy',            
             connection: 'keep-alive',
             'x-powered-by': 'Express'
         })
@@ -25,6 +25,12 @@ class Assertions {
     shouldHaveContentTypeAppJson(response){
         return expect(response.headers, 'content-type').to.include({
             'content-type': 'application/json; charset=utf-8'
+        })
+    }
+
+    shouldHaveContentTypeTxtPlain(response){
+        return expect(response.headers, 'content-type').to.include({
+            'content-type': 'text/plain; charset=utf-8'
         })
     }
 
