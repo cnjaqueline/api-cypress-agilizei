@@ -1,9 +1,9 @@
 <h1 align="center">
     Testes API com Cypress + CI em GitHub Actions
 </h1>
-<h2 align="center">
+<h3 align="center">
     Agilizei Bootcamp - N#4    
-</h2>
+</h3>
 
 ---
 ## ⚙️ Setup
